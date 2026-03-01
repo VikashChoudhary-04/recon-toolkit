@@ -61,11 +61,24 @@ chmod +x full-recon.sh
 ./full-recon.sh example.com
 ```
 
-Results are saved in:
+- Results are saved in:
 ```output/example.com/```
 
+### Linux Execution Note
+
+- After cloning the repository on Linux, make scripts executable:
+
+```
+chmod +x workflows/*.sh modules/*.sh
+```
+
+- Alternatively, run scripts using:
+
+```
+bash workflows/full-recon.sh example.com
+```
 ---
 
 ## ⚠️ Disclaimer
 
-All tools and techniques are used strictly in authorized environments, labs, and legal security testing engagements.
+- All tools and techniques are used strictly in authorized environments, labs, and legal security testing engagements.
