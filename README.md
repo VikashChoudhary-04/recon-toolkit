@@ -88,6 +88,7 @@ Recon-Toolkit/
 
 - Run from the workflows directory:
   ```
+  cd recon-toolkit
   cd workflows
   bash full-recon.sh example.com
   ```
