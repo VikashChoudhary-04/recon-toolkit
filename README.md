@@ -1,144 +1,148 @@
 # 🛠 Recon Toolkit
 
-A Modern Web Application & Bug Bounty Reconnaissance Framework built for Kali Linux.
+- A structured Web Application Reconnaissance Framework built for Kali Linux.
 
-This repository provides:
-
-- Automated reconnaissance workflows
-- Modular recon components
-- Automatic tool installation
-- Structured output handling
-- Modern ProjectDiscovery-based stack
-- Repeatable bug bounty–style pipelines
+- This project standardizes reconnaissance methodology for web application penetration testing and bug bounty workflows. It focuses on clarity, repeatability, and modern tooling rather than tool collection.
 
 ---
 
-# 🎯 Purpose
+## 🎯 Purpose
 
-This framework standardizes modern web reconnaissance by automating:
+- This toolkit exists to:
 
-- Subdomain discovery
-- DNS validation
-- Live host detection
-- Endpoint crawling
-- JavaScript analysis
-- Directory fuzzing
-- Vulnerability template scanning
-- Automated XSS detection
+  - Standardize recon workflow
+  - Automate repetitive enumeration steps
+  - Organize findings cleanly
+  - Support manual testing
+  - Reflect professional methodology
 
-It is optimized for:
+- It is designed for:
 
-- Web Application Pentesting
-- Bug Bounty Hunting
+  - Web Application Pentesting
+  - Bug Bounty Hunting
+  - Authorized Security Testing
 
 ---
 
-# ⚙️ Requirements
-
-- Kali Linux
-- Go 1.20+
-- Internet connection (for first-time tool installation)
-
-The framework automatically installs missing tools.
-
----
-
-# 📂 Structure
+## 🧱 Framework Structure
 ```
-recon-toolkit/
+Recon-Toolkit/
 │
-├── workflows/ → Main orchestration scripts
-├── modules/ → Modular recon components
-├── payloads/ → Attack payload collections
-├── docs/ → Methodology and explanations
-└── output/ → Recon results (auto-created)
+├── workflows/
+│ └── full-recon.sh
+│
+├── modules/
+│ ├── passive.sh
+│ ├── validation.sh
+│ ├── crawl.sh
+│ ├── fuzz.sh
+│ └── scan.sh
+│
+├── docs/
+│ └── methodology.md
+│
+├── output/
+│
+└── README.md
 ```
 
 ---
 
-# 🚀 Usage
+## 🔍 Recon Workflow (Methodology)
 
-From inside the repository:
-```
-cd workflows
-bash full-recon.sh example.com
-```
+- The framework follows a structured approach:
 
-The framework will:
+  1. Passive Subdomain Enumeration  
+  2. DNS Validation  
+  3. Live Host Detection  
+  4. URL & Endpoint Collection  
+  5. JavaScript Analysis  
+  6. Directory Fuzzing  
+  7. Template-Based Vulnerability Scanning  
+  8. Manual Review & Attack Path Identification  
 
-1. Check and install missing tools
-2. Update Nuclei templates
-3. Run passive enumeration
-4. Validate subdomains
-5. Crawl endpoints
-6. Analyze JavaScript
-7. Fuzz directories
-8. Run vulnerability scans
-9. Save structured output
+- Each phase builds on the previous one to create a clear attack surface.
 
-Results are stored in:
+---
+
+## 🧰 Tool Stack (Modern Web Focused)
+
+- The framework uses a focused and modern web testing stack:
+
+  - subfinder  
+  - chaos  
+  - dnsx  
+  - httpx  
+  - gau  
+  - katana  
+  - uro  
+  - ffuf  
+  - nuclei  
+  - dalfox  
+
+- Only tools relevant to web application reconnaissance are included.
+
+---
+
+## 🚀 Usage
+
+- Run from the workflows directory:
+  ```
+  cd workflows
+  bash full-recon.sh example.com
+  ```
+
+- Results are saved in:
+  ```
+  output/example.com/
+  ```
+
+---
+
+## 📂 Output Structure
+
+Example output directory:
 ```
 output/example.com/
+├── subdomains.txt
+├── alive.txt
+├── urls.txt
+├── js-files.txt
+├── directories.txt
+├── nuclei.txt
+└── xss.txt
 ```
 
----
-
-# 🧰 Tools Used (Modern Stack)
-
-- subfinder
-- chaos
-- crt.sh parsing
-- dnsx
-- httpx
-- katana
-- gau
-- uro
-- jsleak
-- ffuf
-- nuclei
-- dalfox
-
-Legacy scraping-based tools were intentionally excluded for stability.
+- All results are structured and separated for easier analysis.
 
 ---
 
-# 🧠 Design Philosophy
+## 🧠 Design Philosophy
 
-This framework focuses on:
+- This toolkit prioritizes:
 
-- Stability over noise
-- Automation over manual repetition
-- Modular structure
-- Modern bug bounty methodology
-- Clean and reproducible workflows
+  - Structured methodology
+  - Clean output organization
+  - Stability over excessive automation
+  - Modern web-focused tooling
+  - Support for manual analysis
 
-Each module operates independently and can be reused separately.
-
----
-
-# 🔐 Disclaimer
-
-This toolkit is intended for:
-
-- Authorized penetration testing
-- Bug bounty programs
-- Legal lab environments
-
-The author is not responsible for misuse.
+- Automation assists testing — it does not replace understanding.
 
 ---
 
-# 📈 Future Improvements
+## 🔐 Disclaimer
 
-- Parallel execution optimization
-- Resume capability
-- Advanced parameter extraction
-- Structured JSON reporting
-- Slack/Discord webhook integration
-- CI/CD integration
+- This project is intended for:
+
+  - Authorized penetration testing
+  - Bug bounty programs
+  - Legal lab environments
+
+- The author is not responsible for misuse.
 
 ---
 
-# 🏁 Goal
+## 📌 Goal
 
-To maintain a professional-grade, repeatable, and efficient reconnaissance workflow aligned with modern web security practices.
+To maintain a clean, professional, and repeatable reconnaissance workflow aligned with junior-level web pentesting standards.
