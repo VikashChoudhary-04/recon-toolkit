@@ -7,6 +7,9 @@ if [ -z "$domain" ]; then
   exit 1
 fi
 
+echo "[*] Running setup..."
+bash ../../modules/setup.sh
+
 mkdir -p ../output/$domain
 cd ../output/$domain || exit
 
