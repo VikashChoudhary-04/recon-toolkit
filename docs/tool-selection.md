@@ -1,12 +1,16 @@
-# Tool Selection Rationale
+# Tool Selection Rationale (Modern Stack)
 
-Sublist3r → Passive subdomain enumeration  
-Chaos → Asset discovery from known datasets  
-dnsx → Fast DNS resolution  
-httpx → Live host probing  
-katana → Modern JS-aware crawler  
+Subfinder → Modern passive subdomain enumeration  
+Chaos → Internet-wide asset dataset  
+crt.sh → Certificate transparency enumeration  
+dnsx → Fast DNS validation  
+httpx → Live host probing with metadata  
+Katana → JavaScript-aware crawler  
+GAU → Historical URL collection  
 uro → URL normalization  
-jsleak → Secret extraction from JS  
-ffuf → Fast directory brute forcing  
-nuclei → Template-based vulnerability scanning  
-dalfox → Context-aware XSS detection  
+jsleak → Secret extraction from JS files  
+ffuf → High-speed directory fuzzing  
+Nuclei → Template-based vulnerability scanning  
+Dalfox → Context-aware XSS detection  
+
+Legacy scraping tools were removed for stability and reliability.
